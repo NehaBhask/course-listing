@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "================================"
 echo "Course Listing Build Information"
 echo "================================"
@@ -8,6 +10,6 @@ echo "Build Date:"
 date
 
 echo "Flask Version:"
-python -c "import flask; print(flask.__version__)"
+python3 -c "from importlib.metadata import version; print(version('Flask'))"
 
 echo "Build check completed successfully!"
